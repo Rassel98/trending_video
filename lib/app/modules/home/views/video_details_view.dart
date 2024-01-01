@@ -242,7 +242,7 @@ class VideoDetailsView extends StatelessWidget {
               ListView.separated(
                 shrinkWrap: true,
                 separatorBuilder: (context, index) => const Divider(),
-                itemCount: 10,
+                itemCount: 1,
                 itemBuilder: (context, index) {
                   return Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -262,8 +262,8 @@ class VideoDetailsView extends StatelessWidget {
                               borderRadius: BorderRadius.circular(40)),
                         ),
                         placeholder: (context, url) => const Icon(Icons.image),
-                        errorWidget: (context, url, error) => SvgPicture.asset(
-                          "assets/svg/co.svg",
+                        errorWidget: (context, url, error) =>Image.asset(
+                          "assets/images/ellipse.png",
                         ),
                       ),
                       const SizedBox(

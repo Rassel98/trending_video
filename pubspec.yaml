@@ -24,6 +24,7 @@ dev_dependencies:
 flutter:
   assets:
     - assets/svg/
+    - assets/images/
   fonts:
     - family: HindSiliguri
       fonts:
