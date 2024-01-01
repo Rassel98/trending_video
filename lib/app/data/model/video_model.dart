@@ -1,6 +1,3 @@
-List<VideoModel> videoModelFromJson(dynamic str) =>
-    List<VideoModel>.from((str as List<dynamic>)
-        .map((x) => VideoModel.fromJson(x)));
 
 class VideoModel {
   String? thumbnail;

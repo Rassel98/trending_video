@@ -17,6 +17,8 @@ class ResponseModel {
         total: json["total"],
         page: json["page"],
         pageSize: json["page_size"],
-        results: json["results"] == null || json["results"] == [] ? [] : List<VideoModel>.from(json["results"].map((x) => VideoModel.fromJson(x))),
+        results: json["results"] == null || json["results"] == []
+            ? []
+            : List<VideoModel>.from(json["results"].map((x) => VideoModel.fromJson(x))),
       );
 }

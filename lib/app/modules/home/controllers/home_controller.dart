@@ -11,6 +11,7 @@ class HomeController extends GetxController {
   RxBool isRefresh = false.obs;
   int total = 1;
   int count = 0;
+  final commentController=TextEditingController();
   ScrollController scrollController = ScrollController();
   late VideoRepository videoRepository;
 
@@ -59,9 +60,10 @@ class HomeController extends GetxController {
     try {
       var getResponse = await videoRepository.getResponse(count);
       if (getResponse != null && getResponse.results != []) {
-        total = getResponse.total ?? 1;
+        total = getResponse.pageSize ?? 1;
         _allVideosList.addAll(getResponse.results!);
         log('data length : ${allVideosList.length}');
+        log('total  : ${getResponse.pageSize }');
         isLoading.value = false;
         isRefresh(false);
       } else {

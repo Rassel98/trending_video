@@ -14,13 +14,12 @@ class ApiService {
       var response = await client.get(Uri.parse(url),
           headers: {'content-type': 'application/json',
         'Accept': 'application/json'});
-       log("message : ${response.body}");
       var data = jsonDecode(utf8.decode(response.bodyBytes));
       if (response.statusCode == 200) {
         return  ResponseModel.fromJson(data);
       }
     } catch (exception) {
-      print('$exception');
+      log('$exception');
     }
     return null;
   }

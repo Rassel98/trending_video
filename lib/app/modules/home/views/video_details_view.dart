@@ -6,7 +6,6 @@ import 'package:intl/intl.dart';
 import 'package:test_app/app/data/model/video_model.dart';
 import 'package:test_app/app/modules/home/views/widgets/custom_button.dart';
 import 'package:video_player/video_player.dart';
-
 import '../controllers/home_controller.dart';
 
 class VideoDetailsView extends StatelessWidget {
@@ -221,6 +220,7 @@ class VideoDetailsView extends StatelessWidget {
                 ),
                 child: TextField(
                   keyboardType: TextInputType.text,
+                  controller: _controller.commentController,
                   textInputAction: TextInputAction.done,
                   decoration: InputDecoration(
                     contentPadding: const EdgeInsets.symmetric(horizontal: 8, vertical: 0),
@@ -234,7 +234,6 @@ class VideoDetailsView extends StatelessWidget {
                     ),
                     hintStyle: const TextStyle(color: Color(0xffCBD5E0), fontSize: 12),
                   ),
-                  onChanged: (value) {},
                 ),
               ),
               const SizedBox(
